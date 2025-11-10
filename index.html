@@ -60,9 +60,13 @@ body{padding-bottom:60px;line-height:1.45;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:44px;width:44px;border-radius:8px;object-fit:contain;}
 .brand h1{font-size:18px;color:var(--neon-blue);text-shadow:0 6px 20px rgba(0,229,255,0.06);}
-.navlinks{display:flex;gap:14px;align-items:center;}
-.navlinks a, .navlinks button{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;background:transparent;border:none;cursor:pointer;transition:all .18s ease;}
-.navlinks a:hover, .navlinks button:hover{color:var(--text);transform:translateY(-2px);}
+.navlinks {
+  display: flex;
+  flex-wrap: wrap; /* <— neu: erlaubt Zeilenumbruch */
+  gap: 14px;
+  align-items: center;
+  justify-content: center; /* optional: zentriert bei kleinem Platz */
+}
 .discord-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--neon-pink),var(--neon-orange));color:white;padding:8px 12px;border-radius:10px;font-weight:700;text-decoration:none;}
 
 main{position:relative; width:100%; max-width:1100px;margin:100px auto 40px;padding:0 18px; min-height:70vh;}
@@ -481,6 +485,7 @@ function showPage(pageId) {
 </body>
 
 </html>
+
 
 
 
