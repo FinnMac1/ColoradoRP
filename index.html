@@ -60,6 +60,10 @@ body{padding-bottom:60px;line-height:1.45;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:44px;width:44px;border-radius:8px;object-fit:contain;}
 .brand h1{font-size:18px;color:var(--neon-blue);text-shadow:0 6px 20px rgba(0,229,255,0.06);}
+.navlinks{display:flex;gap:14px;align-items:center;}
+.navlinks a, .navlinks button{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;background:transparent;border:none;cursor:pointer;transition:all .18s ease;}
+.navlinks a:hover, .navlinks button:hover{color:var(--text);transform:translateY(-2px);}
+
 .navlinks {
   display: flex;
   flex-wrap: wrap; /* <— neu: erlaubt Zeilenumbruch */
@@ -485,6 +489,7 @@ function showPage(pageId) {
 </body>
 
 </html>
+
 
 
 
