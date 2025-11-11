@@ -26,11 +26,15 @@ body{padding-bottom:60px;line-height:1.45;}
   width:calc(100% - 48px);max-width:1200px;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 14px;border-radius:14px;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   box-shadow: 0 6px 22px rgba(0,0,0,0.6);backdrop-filter: blur(6px);
+  flex-wrap: nowrap;         /* 🔥 verhindert Umbruch */
+  overflow: hidden;
 }
 
 .discord-box {
   display: flex;
+  flex-wrap: nowrap;  
   gap: 10px;
+  flex-shrink: 0;  
   background: rgba(255, 255, 255, 0.03);
   padding: 8px 14px;
   border-radius: 12px;
@@ -60,7 +64,13 @@ body{padding-bottom:60px;line-height:1.45;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:44px;width:44px;border-radius:8px;object-fit:contain;}
 .brand h1{font-size:18px;color:var(--neon-blue);text-shadow:0 6px 20px rgba(0,229,255,0.06);}
-.navlinks{display:flex;gap:14px;align-items:center;}
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;         /* 🔥 kein Zeilenumbruch */
+  white-space: nowrap;       /* 🔥 Text bleibt in einer Zeile */
+}
 .navlinks a, .navlinks button{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;background:transparent;border:none;cursor:pointer;transition:all .18s ease;}
 .navlinks a:hover, .navlinks button:hover{color:var(--text);transform:translateY(-2px);}
 
@@ -482,6 +492,7 @@ function showPage(pageId) {
 </body>
 
 </html>
+
 
 
 
